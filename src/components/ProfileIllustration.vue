@@ -1,12 +1,13 @@
 <script setup>
 defineProps({ name: { type: String, required: true } })
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <template>
   <img
     class="profile-illustration"
     :class="{ 'profile-illustration--marker': name === 'verified' }"
-    :src="`/assets/profile-icons/${name}.webp`"
+    :src="`${baseUrl}assets/profile-icons/${name}.webp`"
     alt=""
     width="160"
     height="160"

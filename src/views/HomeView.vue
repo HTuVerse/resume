@@ -4,6 +4,7 @@ import WebProjectCard from '../components/WebProjectCard.vue'
 import { homeHero, profile, resumeProjects } from '../data/profile'
 import { resumeDocument } from '../data/resume'
 
+const baseUrl = import.meta.env.BASE_URL
 const shortcuts = [
   { to: '/projects', title: '项目导航', description: '浏览我的项目作品', image: 'location', color: 'mint' },
   { to: '/tech-stack', title: '技术栈', description: '了解我的技术能力', image: 'code-stack', color: 'violet' },
@@ -36,7 +37,7 @@ const shortcuts = [
     <nav id="navigation" class="web-shortcuts" aria-label="作品集导航">
       <RouterLink v-for="item in shortcuts" :key="item.to" :to="item.to" class="web-panel web-shortcut">
         <span class="web-shortcut-icon" :class="`web-shortcut-icon--${item.color}`">
-          <img :src="`/assets/mobile/optimized/${item.image}.webp`" alt="" />
+          <img :src="`${baseUrl}assets/mobile/optimized/${item.image}.webp`" alt="" />
         </span>
         <span class="web-shortcut-copy"><strong>{{ item.title }}</strong><small>{{ item.description }}</small></span>
         <PortfolioIcon name="arrow" />

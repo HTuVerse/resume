@@ -1,3 +1,5 @@
+const baseUrl = import.meta.env?.BASE_URL ?? '/'
+
 // Resume facts are sourced from public/assets/resume/liuweihong-resume.pdf.
 // Keep project claims, skills and links aligned with the downloadable resume.
 export const profile = {
@@ -29,7 +31,7 @@ export const profileContacts = [
 ]
 
 export const homeHero = {
-  src: '/assets/mobile/optimized/home-hero.webp',
+  src: `${baseUrl}assets/mobile/optimized/home-hero.webp`,
   alt: '穿蓝色卫衣的开发者在城市与绿植间使用笔记本编程',
   width: 960,
   height: 1200,
@@ -45,7 +47,7 @@ export const resumeProjects = [
     tags: ['Java', 'Spring Cloud', 'Spring AI', 'Redis', 'RabbitMQ', 'Docker'],
     allTags: ['Java', 'Spring Boot', 'Spring Cloud', 'Spring AI', 'Nacos', 'Gateway', 'OpenFeign', 'MySQL', 'Redis', 'RabbitMQ', 'Docker', 'Vue', 'uni-app'],
     status: '个人独立全栈开发', update: '微服务 · AI 应用',
-    image: '/assets/mobile/optimized/liteshop.webp', mobileImage: '/assets/mobile/optimized/liteshop.webp',
+    image: `${baseUrl}assets/mobile/optimized/liteshop.webp`, mobileImage: `${baseUrl}assets/mobile/optimized/liteshop.webp`,
     detailTo: '/projects/liteshop', repo: 'https://github.com/HTuVerse/LiteShop-boot-microservices',
     highlights: [
       { title: '多租户架构', description: '共享与独立数据库结合，基于租户元数据中心实现动态数据源路由与租户级隔离。' },
@@ -63,7 +65,7 @@ export const resumeProjects = [
     tags: ['Spring AI', 'pgvector', 'Redis', 'SSE'],
     allTags: ['Java', 'Spring Boot', 'Spring AI', 'MySQL', 'Redis', 'PostgreSQL', 'pgvector', 'SSE', 'Docker'],
     status: '个人独立全栈开发', update: 'RAG · Tool Calling',
-    image: '/assets/mobile/optimized/flowagent.webp', mobileImage: '/assets/mobile/optimized/flowagent.webp',
+    image: `${baseUrl}assets/mobile/optimized/flowagent.webp`, mobileImage: `${baseUrl}assets/mobile/optimized/flowagent.webp`,
     detailTo: '/projects/flowagent', repo: 'https://github.com/HTuVerse/LiteShop-SaaS-admin',
     highlights: [
       { title: 'Agent 工具调用', description: '基于 Spring AI Tool Calling，将工单创建、状态查询与历史记录检索封装为标准化工具。' },
@@ -75,19 +77,19 @@ export const resumeProjects = [
 ]
 
 export const skillGroups = [
-  { title: 'Java 后端开发', description: 'Java、Spring Boot、Spring MVC、MyBatis-Plus；RESTful API、IoC / AOP 与业务分层设计。', image: '/assets/technology/backend.webp' },
-  { title: '微服务与数据', description: 'Spring Cloud、Nacos、Gateway、OpenFeign；MySQL、Redis、RabbitMQ 与异步调用。', image: '/assets/technology/microservices.webp' },
-  { title: 'AI 与工程化', description: 'Spring AI、大模型 API、Prompt、多轮对话；RAG / Tool Calling 与 Docker。', image: '/assets/technology/ai-engineering.webp' },
+  { title: 'Java 后端开发', description: 'Java、Spring Boot、Spring MVC、MyBatis-Plus；RESTful API、IoC / AOP 与业务分层设计。', image: `${baseUrl}assets/technology/backend.webp` },
+  { title: '微服务与数据', description: 'Spring Cloud、Nacos、Gateway、OpenFeign；MySQL、Redis、RabbitMQ 与异步调用。', image: `${baseUrl}assets/technology/microservices.webp` },
+  { title: 'AI 与工程化', description: 'Spring AI、大模型 API、Prompt、多轮对话；RAG / Tool Calling 与 Docker。', image: `${baseUrl}assets/technology/ai-engineering.webp` },
 ]
 
 export const technologies = [
-  { name: 'Java', image: '/assets/mobile/optimized/tech-java.webp', hasEmbeddedLabel: true },
-  { name: 'Spring Boot', image: '/assets/mobile/optimized/tech-spring.webp', hasEmbeddedLabel: true },
-  { name: 'MySQL', image: '/assets/mobile/optimized/tech-mysql.webp', hasEmbeddedLabel: true },
-  { name: 'Redis', image: '/assets/mobile/optimized/tech-redis.webp', hasEmbeddedLabel: true },
-  { name: 'RabbitMQ', image: '/assets/mobile/optimized/tech-rabbitmq.webp', hasEmbeddedLabel: true },
-  { name: 'Spring Cloud', image: '/assets/technology/spring-cloud.webp' },
-  { name: 'Spring AI', image: '/assets/technology/spring-ai.webp' },
-  { name: 'Docker', image: '/assets/mobile/optimized/tech-docker.webp', hasEmbeddedLabel: true },
-  { name: 'pgvector', image: '/assets/technology/pgvector.webp' },
+  { name: 'Java', image: `${baseUrl}assets/mobile/optimized/tech-java.webp`, hasEmbeddedLabel: true },
+  { name: 'Spring Boot', image: `${baseUrl}assets/mobile/optimized/tech-spring.webp`, hasEmbeddedLabel: true },
+  { name: 'MySQL', image: `${baseUrl}assets/mobile/optimized/tech-mysql.webp`, hasEmbeddedLabel: true },
+  { name: 'Redis', image: `${baseUrl}assets/mobile/optimized/tech-redis.webp`, hasEmbeddedLabel: true },
+  { name: 'RabbitMQ', image: `${baseUrl}assets/mobile/optimized/tech-rabbitmq.webp`, hasEmbeddedLabel: true },
+  { name: 'Spring Cloud', image: `${baseUrl}assets/technology/spring-cloud.webp` },
+  { name: 'Spring AI', image: `${baseUrl}assets/technology/spring-ai.webp` },
+  { name: 'Docker', image: `${baseUrl}assets/mobile/optimized/tech-docker.webp`, hasEmbeddedLabel: true },
+  { name: 'pgvector', image: `${baseUrl}assets/technology/pgvector.webp` },
 ]

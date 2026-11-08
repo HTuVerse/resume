@@ -36,11 +36,12 @@ const filters = [
   { id: 'all', label: '全部项目' }, { id: 'core', label: '核心项目' },
   { id: 'java', label: 'Java 后端' }, { id: 'cloud', label: '微服务' }, { id: 'ai', label: 'AI 应用' },
 ]
+const baseUrl = import.meta.env.BASE_URL
 const shortcuts = [
-  { to: '/projects', title: '项目导航', description: '浏览我的项目作品', image: '/assets/mobile/optimized/location.webp' },
-  { to: '/tech-stack', title: '技术栈', description: '我的技术能力图谱', image: '/assets/mobile/optimized/code-stack.webp' },
-  { to: '/resume', title: '简历', description: '查看我的完整简历', image: '/assets/mobile/optimized/id-photo.webp' },
-  { to: '/contact', title: '联系我', description: '合作与交流', image: '/assets/mobile/optimized/contact-chat.webp' },
+  { to: '/projects', title: '项目导航', description: '浏览我的项目作品', image: `${baseUrl}assets/mobile/optimized/location.webp` },
+  { to: '/tech-stack', title: '技术栈', description: '我的技术能力图谱', image: `${baseUrl}assets/mobile/optimized/code-stack.webp` },
+  { to: '/resume', title: '简历', description: '查看我的完整简历', image: `${baseUrl}assets/mobile/optimized/id-photo.webp` },
+  { to: '/contact', title: '联系我', description: '合作与交流', image: `${baseUrl}assets/mobile/optimized/contact-chat.webp` },
 ]
 const projects = computed(() => {
   const value = query.value.trim().toLowerCase()
